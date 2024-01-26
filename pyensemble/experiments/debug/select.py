@@ -46,6 +46,111 @@ def select_audio(request,*args,**kwargs):
         if trial['click_to_start']:
             trial['prompt'] = '<a id="start_button" class="btn btn-primary" role="button"  href="#">Start sound</a>'
 
+        trial_welcome = {
+            'type': 'jsPsychHtmlKeyboardResponse',
+            'stimulus': "Welcome to the experiment. Press any key to begin.",
+        }
+        
+        trial_instructions = {
+            'type': 'jsPsychHtmlKeyboardResponse',
+            'stimulus': `
+    <p>In this experiment, a pair of letters will appear in the center 
+    of the screen, one after the other.</p>
+    <p>If you see the sequence <strong>A-X</strong>, 
+    press the letter J on the keyboard as fast as you can.</p>
+    <p>For any other letter sequence, press the letter F.</p>
+    <p>Press any key to begin.</p>
+  `,
+            post_trial_gap: 2000
+        }
+        trial = {
+            'type': 'audio-keyboard-response',
+            'stimulus': stimulus_url,
+            'choices': 'none',
+            'click_to_start': True,
+            'trial_ends_after_audio': True,
+            'trial_duration': 3000,
+        }
+        trial = {
+            'type': 'audio-keyboard-response',
+            'stimulus': stimulus_url,
+            'choices': 'none',
+            'click_to_start': True,
+            'trial_ends_after_audio': True,
+            'trial_duration': 3000,
+        }
+        trial = {
+            'type': 'audio-keyboard-response',
+            'stimulus': stimulus_url,
+            'choices': 'none',
+            'click_to_start': True,
+            'trial_ends_after_audio': True,
+            'trial_duration': 3000,
+        }
+        trial = {
+            'type': 'audio-keyboard-response',
+            'stimulus': stimulus_url,
+            'choices': 'none',
+            'click_to_start': True,
+            'trial_ends_after_audio': True,
+            'trial_duration': 3000,
+        }
+        trial = {
+            'type': 'audio-keyboard-response',
+            'stimulus': stimulus_url,
+            'choices': 'none',
+            'click_to_start': True,
+            'trial_ends_after_audio': True,
+            'trial_duration': 3000,
+        }
+        trial = {
+            'type': 'audio-keyboard-response',
+            'stimulus': stimulus_url,
+            'choices': 'none',
+            'click_to_start': True,
+            'trial_ends_after_audio': True,
+            'trial_duration': 3000,
+        }
+        trial = {
+            'type': 'audio-keyboard-response',
+            'stimulus': stimulus_url,
+            'choices': 'none',
+            'click_to_start': True,
+            'trial_ends_after_audio': True,
+            'trial_duration': 3000,
+        }
+        trial = {
+            'type': 'audio-keyboard-response',
+            'stimulus': stimulus_url,
+            'choices': 'none',
+            'click_to_start': True,
+            'trial_ends_after_audio': True,
+            'trial_duration': 3000,
+        }
+        trial = {
+            'type': 'audio-keyboard-response',
+            'stimulus': stimulus_url,
+            'choices': 'none',
+            'click_to_start': True,
+            'trial_ends_after_audio': True,
+            'trial_duration': 3000,
+        }
+        trial = {
+            'type': 'audio-keyboard-response',
+            'stimulus': stimulus_url,
+            'choices': 'none',
+            'click_to_start': True,
+            'trial_ends_after_audio': True,
+            'trial_duration': 3000,
+        }
+        trial = {
+            'type': 'audio-keyboard-response',
+            'stimulus': stimulus_url,
+            'choices': 'none',
+            'click_to_start': True,
+            'trial_ends_after_audio': True,
+            'trial_duration': 3000,
+        }
         timeline.append(trial)
 
     stimulus_id = None
