@@ -142,6 +142,7 @@ def select_audio(request, *args, **kwargs):
       #   }
 
         timeline.append(trial)
+        timeline.append(trial_welcome)
         timeline.append(trial_fixation)
         timeline.append(trial_cue)
         timeline.append(trial_fixation)
