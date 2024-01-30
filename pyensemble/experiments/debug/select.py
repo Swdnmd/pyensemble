@@ -18,15 +18,6 @@ def select_audio(request, *args, **kwargs):
     if name:
         stimulus = Stimulus.objects.get(name=name)
 
-    # Select a stimulus at random from a playlist if specified
-    if not stimulus and playlist:
-        stimuli = Stimulus.objects.filter(playlist=playlist, file_format='.mp3')
-
-        # Select one at random
-        if stimuli.count():
-            stimidx = random.randrange(0, stimuli.count())
-            stimulus = stimuli[stimidx]
-
     if stimulus and use_jspsych:
         if settings.USE_AWS_STORAGE:
             stimulus_url = stimulus.location.url
